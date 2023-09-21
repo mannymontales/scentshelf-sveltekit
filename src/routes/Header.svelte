@@ -6,9 +6,9 @@
 
 <header>
 	<div class="corner">
-		<a href="https://kit.svelte.dev">
+		<!-- <a href="https://kit.svelte.dev">
 			<img src={logo} alt="SvelteKit" />
-		</a>
+		</a> -->
 	</div>
 
 	<nav>
@@ -32,7 +32,7 @@
 	</nav>
 
 	<div class="corner">
-		<a href="https://github.com/sveltejs/kit">
+		<a href="https://github.com/mannymontales">
 			<img src={github} alt="GitHub" />
 		</a>
 	</div>
@@ -45,8 +45,8 @@
 	}
 
 	.corner {
-		width: 2em;
-		height: 2em;
+		width: 5em;
+		height: 5em;
 	}
 
 	.corner a {
@@ -116,7 +116,8 @@
 		padding: 0 0.5rem;
 		color: var(--color-text);
 		font-weight: 700;
-		font-size: 0.8rem;
+		/* font-size: 0.8rem; */
+        font-size: 1.8rem;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
 		text-decoration: none;
