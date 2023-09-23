@@ -1,26 +1,14 @@
-<!-- <script>
-    /** @type {import('./$types').PageData} */
+<script>
+    export let data;  // Directly use the item prop
+    // const { item } = data;
 
-    import { page } from '$app/stores';
-    export let data;
-    //const { item } = data;
-
-    
+    console.log(data);
+    // If you need to console log
     console.log(data);
 </script>
 
-<h1> { data.id } { data.name }</h1> -->
+<h2>hello</h2>
 
-<!-- {#each item as scent }
-<h1> { scent.id } { scent.name }</h1>
 
-{/each} -->
-
-<script>
-    export let data;
-    console.log(data)
-</script>
-
-<h1>{data.id} {data.name}</h1>
-
+<h1> { data.item.id } { data.item.name }</h1>
 

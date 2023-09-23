@@ -12,6 +12,12 @@ export async function load({ fetch, params }) {
     const res = await fetch(`${PUBLIC_BASE}/scent/${id}`);
     const item = await res.json();
 
+    console.log(item);
+
+    return { item };
+    // return { props: { item } };
+    // return { props: { data: item } };
     // return { item };
-    return { props: { data: item } };
+
+
 };
