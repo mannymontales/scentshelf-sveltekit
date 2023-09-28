@@ -12,10 +12,11 @@
 <!-- <h1> { data.item.id } { data.item.name }</h1> -->
 
 <h1> { data.item.id } </h1>
+<h1> { data.item.name } </h1>
 <h1> { data.item.brand } </h1>
-<h1> { data.item.image_url } </h1>
 
-<img src="/images/fragrance_images/acqua_di_gio.jpg" alt="My Image" />
+
+<img src= { data.item.image_url } alt="My Image" />
 <h1> Notes: </h1>
 <u1>
     {#each data.item.notes as note (note.id) }
