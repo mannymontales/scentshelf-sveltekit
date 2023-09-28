@@ -9,10 +9,10 @@ export async function load({ fetch, params }) {
     //console.log(id);
     //console.log(PUBLIC_BASE);
     // console.log('env.base');
-    const res = await fetch(`${PUBLIC_BASE}/scent/${id}`);
+    const res = await fetch(`${PUBLIC_BASE}/fragrance/${id}`);
     const item = await res.json();
 
-    console.log(item);
+    // console.log(item);
 
     return { item };
     // return { props: { item } };
