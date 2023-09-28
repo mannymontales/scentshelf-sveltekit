@@ -19,13 +19,15 @@
 // expressions within a string or when you need a multiline string.
 
 import { PUBLIC_BASE } from "$env/static/public";
+
+
 // import { PUBLIC_BASE } from "$lib/constants"
 /** @type {import('./$types').PageLoad} */
 export async function load({ fetch }) {
     
     //console.log(PUBLIC_BASE);
     // console.log('env.base');
-    const res = await fetch(`${PUBLIC_BASE}/scent`);
+    const res = await fetch(`${PUBLIC_BASE}/fragrance`);
     const item = await res.json();
 
     return { item };
