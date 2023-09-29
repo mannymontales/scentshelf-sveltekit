@@ -1,8 +1,21 @@
+import { PUBLIC_BASE } from "$env/static/public";
+
 /** @type {import('./$types').PageLoad} */
 export async function load({ fetch }) {
-    
-    const res = await fetch("http://localhost:8080/api/scent");
-    const item = await res.json();
 
-    return { item };
+    const fragranceRes = await fetch(`${PUBLIC_BASE}/fragrance`);
+    const fragranceData = await fragranceRes.json();
+    
+    const reviewRes = await fetch(`${PUBLIC_BASE}/review`);
+    const reviewData = await reviewRes.json();
+
+    // console.log(fragranceData);
+    // console.log(brandData);
+    
+    return {
+        props: {
+            fragrance: fragranceData,
+            review: reviewData
+        }
+    };
 };

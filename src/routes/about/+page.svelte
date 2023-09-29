@@ -1,11 +1,19 @@
 <script>
 
     export let data;
-    const { item } = data;
-    console.log(data);
+
+    console.log(data.props.fragrance);
+    console.log(data.props.review);
 </script>
 
-{#each item as scent }
+{#each data.props.fragrance as scent }
     <h1> { scent.id } { scent.name }</h1>
     
 {/each}
+
+{#each data.props.review as review }
+
+    <h2> {review.review_text}</h2>
+    
+{/each}
+
