@@ -3,18 +3,21 @@ import { PUBLIC_BASE } from "$env/static/public";
 /** @type {import('./$types').PageLoad} */
 export async function load({ fetch, params }) {
     
-    //console.log(params);
-
     const id = parseInt(params.slug);
-    //console.log(id);
-    //console.log(PUBLIC_BASE);
-    // console.log('env.base');
-    const res = await fetch(`${PUBLIC_BASE}/fragrance/${id}`);
-    const item = await res.json();
 
+    const fragranceResponse = await fetch(`${PUBLIC_BASE}/fragrance/${id}`);
+    const fragranceData = await fragranceResponse.json();
+
+    const reviewRes = await fetch(`${PUBLIC_BASE}/review`);
+    const reviewData = await reviewRes.json();
     // console.log(item);
 
-    return { item };
+    return { 
+        props: {
+            fragrance: fragranceData,
+            review: reviewData
+        }
+     };
     // return { props: { item } };
     // return { props: { data: item } };
     // return { item };
