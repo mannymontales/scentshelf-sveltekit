@@ -1,0 +1,4 @@
+Review 
+# Understanding and setting up a multi-stage Docker build process.
+# Dependency errors especially with vite, sveltekit, node adapters
+# Node servers and node in general
