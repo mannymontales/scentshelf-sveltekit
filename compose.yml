@@ -1,35 +1,12 @@
-# version: '3.8'
-# services:
-#   app:
-#     build: .
-#     ports:
-#       - '3000:3000'
-#     environment:
-#       - PUBLIC_BASE=http://localhost:8080/api
-#       - .env
-
-
 version: '3.8'
+
 services:
-  svelte-app:
+  app:
     build: .
     ports:
       - '3000:3000'
-    env_file:
-      - .env
-    networks:
-      - app-network
-
-networks:
-  app-network:
-    driver: bridge
-
-#     networks:
-#       - shared-network
-
-# networks:
-#   shared-network:
-#     external: true
+    environment:
+      - PUBLIC_BASE=http://localhost:8080
 
 
 

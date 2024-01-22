@@ -1,4 +1,5 @@
-import { PUBLIC_BASE } from "$env/static/public";
+import { PUBLIC_BASE } from '$env/static/public';
+
 
 /** @type {import('./$types').PageLoad} */
 export async function load({ fetch }) {

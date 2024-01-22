@@ -18,7 +18,7 @@
 // Use backticks when you need to embed variables or 
 // expressions within a string or when you need a multiline string.
 
-import { PUBLIC_BASE } from "$env/static/public";
+import { PUBLIC_BASE } from '$env/static/public';
 
 
 // import { PUBLIC_BASE } from "$lib/constants"
